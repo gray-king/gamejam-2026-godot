@@ -10,12 +10,29 @@
 [node name="Level1" type="Node2D" unique_id=384055476]
 script = ExtResource("1_sk5k4")
 
-[node name="Machinepart1" parent="." unique_id=771903748 groups=["machine parts"] instance=ExtResource("5_6761a")]
-position = Vector2(437, 500)
+[node name="mp1" parent="." unique_id=2145415990 instance=ExtResource("5_6761a")]
+position = Vector2(291.99997, 489.99997)
+scale = Vector2(0.2, 0.2)
+
+[node name="mp2" parent="." unique_id=745344775 instance=ExtResource("5_6761a")]
+position = Vector2(210.00003, 561.99994)
+scale = Vector2(0.2, 0.2)
+
+[node name="mp3" parent="." unique_id=586137145 instance=ExtResource("5_6761a")]
+position = Vector2(395.00003, 551.99994)
+scale = Vector2(0.2, 0.2)
+
+[node name="mp4" parent="." unique_id=569190916 instance=ExtResource("5_6761a")]
+position = Vector2(75.000046, 547.99994)
+scale = Vector2(0.2, 0.2)
+
+[node name="mp5" parent="." unique_id=771903748 groups=["machine parts"] instance=ExtResource("5_6761a")]
+position = Vector2(-76, 503)
 scale = Vector2(0.2, 0.2)
 
 [node name="Platform" parent="." unique_id=1808641375 instance=ExtResource("1_6iamk")]
-position = Vector2(286, 630)
+position = Vector2(228, 697)
+scale = Vector2(10, 1)
 
 [node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
 position = Vector2(334, 222)
