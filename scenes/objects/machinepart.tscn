@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bfmxyne2o3nj6"]
+
+[ext_resource type="Texture2D" uid="uid://dljbhagt2tnkp" path="res://sprites/machinepart.png" id="1_6u1sv"]
+[ext_resource type="Script" uid="uid://b4hpmmvw0xyf8" path="res://scripts/machinepart.gd" id="1_e8des"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oswj7"]
+radius = 105.01513
+height = 237.9663
+
+[node name="Machinepart" type="Area2D" unique_id=2145415990]
+script = ExtResource("1_e8des")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1931946031]
+texture = ExtResource("1_6u1sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=836193888]
+rotation = 1.5812062
+shape = SubResource("CapsuleShape2D_oswj7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

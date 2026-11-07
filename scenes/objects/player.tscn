@@ -6,7 +6,7 @@
 radius = 229.0
 height = 566.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1219560730]
+[node name="Player" type="CharacterBody2D" unique_id=1219560730 groups=["player"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=18734872]
 texture = ExtResource("1_a8lix")
