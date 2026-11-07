@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://68q3r6rskmwq"]
+
+[ext_resource type="Texture2D" uid="uid://c56jmdf8jd1cp" path="res://sprites/cat.png" id="1_d1fni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1fni"]
+size = Vector2(375, 257)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m7pd"]
+size = Vector2(166, 247)
+
+[node name="Cat" type="CharacterBody2D" unique_id=1422098042]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=690874402]
+texture = ExtResource("1_d1fni")
+
+[node name="dangerZone" type="CollisionShape2D" parent="." unique_id=372454100]
+position = Vector2(-59.5, 25.5)
+shape = SubResource("RectangleShape2D_d1fni")
+debug_color = Color(0.9995367, 0, 0.12427335, 0.41960785)
+
+[node name="biteZone" type="CollisionShape2D" parent="." unique_id=420541797]
+position = Vector2(221, 29.5)
+shape = SubResource("RectangleShape2D_4m7pd")
+debug_color = Color(0.26613265, 0.6233094, 0.33397502, 0.41960785)
