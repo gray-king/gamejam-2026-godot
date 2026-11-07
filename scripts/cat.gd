@@ -15,6 +15,7 @@ var dangerTimer : float = 0.0
 var stalkingSpeed : float = 200.0
 
 var catHP : int = 5
+var harmPlayer : bool = true
 
 func move(speed, direction):
 	moving = true
@@ -41,15 +42,16 @@ func move(speed, direction):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	print(currentZone)
+		
+	if catHP <= 0: # bye bye kitty
+		self.queue_free()
 	
 	# if player in danger zone, deal 1 HP of damage a second
-	if currentZone == "dangerZone":
+	if currentZone == "dangerZone" and harmPlayer:
 		dangerTimer += delta
-		if dangerTimer >= 1.0:
+		if dangerTimer >= 0.5:
 			player.hp -= 1 # deal damage to player
-			dangerTimer -= 1.0 # reset timer
+			dangerTimer -= 0.5 # reset timer
 			
 	# if player detected, chase after them
 	elif currentZone == "playerDetection":
@@ -80,6 +82,17 @@ func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_inde
 		
 		currentZone = local_shape_node.name
 		# options are playerDetection, dangerZone and biteZone
+
+func _input(event):
+	# deal damage to cat if attacked in right spot
+	if Input.is_key_pressed(KEY_SPACE):
+		if currentZone == "biteZone":
+			catHP -= 1
+			
+	if Input.is_key_pressed(KEY_DOWN):
+		harmPlayer = false
+	else:
+		harmPlayer = true
 
 func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	
