@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2q02264vbk0d"]
+
+[ext_resource type="PackedScene" uid="uid://c6v40u1oamyl3" path="res://scenes/objects/platform.tscn" id="1_6iamk"]
+[ext_resource type="PackedScene" uid="uid://pwec47c8kiv2" path="res://scenes/objects/player.tscn" id="2_nsrm0"]
+[ext_resource type="Script" uid="uid://bjirdgxae6uxi" path="res://scripts/player.gd" id="3_nsrm0"]
+
+[node name="Level1" type="Node2D" unique_id=384055476]
+
+[node name="Platform" parent="." unique_id=1808641375 instance=ExtResource("1_6iamk")]
+position = Vector2(286, 630)
+
+[node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
+position = Vector2(332.99997, 215.99998)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("3_nsrm0")
