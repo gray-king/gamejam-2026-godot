@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b6uoym0e5085u" path="res://scripts/cat.gd" id="1_k5yyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oswj7"]
-size = Vector2(395, 259)
+size = Vector2(353, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1fni"]
 size = Vector2(378, 257)
@@ -21,7 +21,7 @@ texture = ExtResource("1_d1fni")
 [node name="Area2D" type="Area2D" parent="." unique_id=1844439224]
 
 [node name="playerDetection" type="CollisionShape2D" parent="Area2D" unique_id=1951560455]
-position = Vector2(-421.5, 23.5)
+position = Vector2(-442.5, 23.5)
 shape = SubResource("RectangleShape2D_oswj7")
 
 [node name="dangerZone" type="CollisionShape2D" parent="Area2D" unique_id=372454100]

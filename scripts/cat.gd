@@ -12,9 +12,15 @@ var currentDirection : Vector2 = Vector2.LEFT
 
 var currentZone : String = "None"
 var dangerTimer : float = 0.0
+var stalkingSpeed : float = 200.0
 
-func move(speed, direction, delta: float):
+var catHP : int = 5
+
+func move(speed, direction):
 	moving = true
+	
+	# make cat wait for a little bit
+	await get_tree().create_timer(rng.randf_range(2,5)).timeout
 		
 	# flip sprite if needed
 	if direction != currentDirection:
@@ -22,10 +28,15 @@ func move(speed, direction, delta: float):
 	# once check is done, update current direction
 	currentDirection = direction
 	
-	for i in range(rng.randf_range(30,200)):
+	var duration = rng.randf_range(0.5, 2.0)
+	var elapsed = 0.0
+
+	while elapsed < duration:
+		var delta = get_process_delta_time()
 		position += direction.normalized() * speed * delta
+		elapsed += delta
 		await get_tree().process_frame
-	await get_tree().create_timer(rng.randf_range(2,5)).timeout
+
 	moving = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,16 +50,26 @@ func _process(delta: float) -> void:
 		if dangerTimer >= 1.0:
 			player.hp -= 1 # deal damage to player
 			dangerTimer -= 1.0 # reset timer
+			
+	# if player detected, chase after them
+	elif currentZone == "playerDetection":
+		follow_player()
 	
 	# move cat around randomly
-	if not moving:
+	if not moving and currentZone != "playerDetection":
 		speed = rng.randf_range(50,150)
 		direction = directionChoice[randi() % 2] # chooses left or right
-		move(speed, direction, delta)
+		move(speed, direction)
 
 # if in sight, stalk down player !
 func follow_player():
-	pass
+	moving = false
+	var direction = global_position.direction_to(player.global_position)
+	var delta = get_process_delta_time()
+	if direction.x < 0:
+		position += Vector2.LEFT.normalized() * stalkingSpeed * delta
+	else:
+		position += Vector2.RIGHT.normalized() * stalkingSpeed * delta
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
