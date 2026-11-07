@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6v40u1oamyl3" path="res://scenes/objects/platform.tscn" id="1_6iamk"]
 [ext_resource type="PackedScene" uid="uid://pwec47c8kiv2" path="res://scenes/objects/player.tscn" id="2_nsrm0"]
 [ext_resource type="Script" uid="uid://bjirdgxae6uxi" path="res://scripts/player.gd" id="3_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://bvlo67nljeewa" path="res://scenes/objects/camera.tscn" id="4_x42e6"]
 
 [node name="Level1" type="Node2D" unique_id=384055476]
 
@@ -10,6 +11,10 @@
 position = Vector2(286, 630)
 
 [node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
-position = Vector2(332.99997, 215.99998)
+position = Vector2(334, 222)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("3_nsrm0")
+
+[node name="Camera" parent="Player" unique_id=1943534982 instance=ExtResource("4_x42e6")]
+position = Vector2(2.861023e-06, 9.536743e-06)
+scale = Vector2(9.999999, 9.999999)
