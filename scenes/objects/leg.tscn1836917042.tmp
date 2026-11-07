@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bugyrq340purb"]
+
+[ext_resource type="Texture2D" uid="uid://b544ulde1257o" path="res://sprites/leg.png" id="1_3yc73"]
+[ext_resource type="Script" uid="uid://4gjdee0tcbg5" path="res://scripts/leg.gd" id="1_6d1xd"]
+[ext_resource type="Texture2D" uid="uid://8d6258duqb22" path="res://sprites/warning.webp" id="3_spwyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m7pd"]
+size = Vector2(194, 313)
+
+[node name="Leg" type="Node2D" unique_id=1402336115]
+script = ExtResource("1_6d1xd")
+
+[node name="warning" type="Sprite2D" parent="." unique_id=1698358506]
+z_index = -1
+position = Vector2(0, -76)
+scale = Vector2(0.608, 0.608)
+texture = ExtResource("3_spwyf")
+
+[node name="danger" type="Area2D" parent="." unique_id=1604458008]
+position = Vector2(0, -450)
+
+[node name="Sprite2D" type="Sprite2D" parent="danger" unique_id=483522325]
+position = Vector2(1, -122)
+texture = ExtResource("1_3yc73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="danger" unique_id=1334253175]
+position = Vector2(2, -151)
+shape = SubResource("RectangleShape2D_4m7pd")
