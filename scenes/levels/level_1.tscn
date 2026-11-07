@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://68q3r6rskmwq" path="res://scenes/objects/cat.tscn" id="4_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bvlo67nljeewa" path="res://scenes/objects/camera.tscn" id="4_x42e6"]
 [ext_resource type="PackedScene" uid="uid://bfmxyne2o3nj6" path="res://scenes/objects/machinepart.tscn" id="5_6761a"]
-[ext_resource type="Script" uid="uid://b6uoym0e5085u" path="res://scripts/cat.gd" id="5_s8va5"]
 
 [node name="Level1" type="Node2D" unique_id=384055476]
 script = ExtResource("1_sk5k4")
@@ -38,7 +37,6 @@ scale = Vector2(10, 1)
 
 [node name="Cat" parent="." unique_id=2060970103 instance=ExtResource("4_oc4kc")]
 position = Vector2(1907, 466)
-script = ExtResource("5_s8va5")
 
 [node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
 position = Vector2(334, 222)

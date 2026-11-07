@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-var speed = 300
-var jump_speed = -400.0
+var speed : float = 300
+var jump_speed : float = -400.0
+var hp : int = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,3 +25,5 @@ func _physics_process(delta):
 	velocity.x = direction * speed
 
 	move_and_slide()
+	
+	print(hp)
