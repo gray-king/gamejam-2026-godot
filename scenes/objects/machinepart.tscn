@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfmxyne2o3nj6"]
 
-[ext_resource type="Texture2D" uid="uid://dljbhagt2tnkp" path="res://sprites/machinepart.png" id="1_6u1sv"]
+[ext_resource type="Texture2D" uid="uid://pixo2rafcn5j" path="res://sprites/machinepart.png" id="1_6u1sv"]
 [ext_resource type="Script" uid="uid://b4hpmmvw0xyf8" path="res://scripts/machinepart.gd" id="1_e8des"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oswj7"]
