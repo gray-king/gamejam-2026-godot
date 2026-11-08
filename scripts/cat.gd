@@ -90,6 +90,7 @@ func _input(event):
 	if Input.is_key_pressed(KEY_SPACE):
 		if currentZone == "biteZone":
 			catHP -= 1
+			gameController.meowSFX.play()
 	
 	# don't damage player if crouching underneath !
 	if Input.is_key_pressed(KEY_DOWN):

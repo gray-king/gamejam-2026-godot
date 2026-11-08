@@ -6,6 +6,7 @@ extends Node
 @onready var player = $Player
 @onready var stompSFX = $stompSFX
 @onready var squeakSFX = $squeakSFX
+@onready var meowSFX = $meowSFX
 
 var gameCompleted : bool = false
 

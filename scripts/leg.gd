@@ -85,3 +85,4 @@ func _on_danger_body_entered(body: Node2D) -> void:
 	# only damage player by actively stomping on them
 	if isStomping and body.is_in_group("player"): 
 		body.hp -= playerDamage
+		gameController.squeakSFX.play()

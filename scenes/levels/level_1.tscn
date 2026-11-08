@@ -14,6 +14,7 @@
 [ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="10_qxy0u"]
 [ext_resource type="AudioStream" uid="uid://bh2q7tanslxhx" path="res://sprites/sfx/stomp.mp3" id="13_dnkej"]
 [ext_resource type="AudioStream" uid="uid://ceamwimdjgm3j" path="res://sprites/sfx/squeak.mp3" id="14_mm8aj"]
+[ext_resource type="AudioStream" uid="uid://bxe5quo3g68cy" path="res://sprites/sfx/meow.mp3" id="15_wtwp4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oswj7"]
 font = ExtResource("10_qxy0u")
@@ -216,5 +217,8 @@ stream = ExtResource("13_dnkej")
 
 [node name="squeakSFX" type="AudioStreamPlayer" parent="." unique_id=1592316509]
 stream = ExtResource("14_mm8aj")
+
+[node name="meowSFX" type="AudioStreamPlayer" parent="." unique_id=508901340]
+stream = ExtResource("15_wtwp4")
 
 [connection signal="body_entered" from="timemachine" to="timemachine" method="_on_body_entered"]
