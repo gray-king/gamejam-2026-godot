@@ -56,19 +56,19 @@ position = Vector2(-1330.9999, 569.99994)
 scale = Vector2(0.2, 0.2)
 
 [node name="mp2" parent="." unique_id=745344775 instance=ExtResource("5_6761a")]
-position = Vector2(210.00003, 561.99994)
+position = Vector2(4515, -73)
 scale = Vector2(0.2, 0.2)
 
 [node name="mp3" parent="." unique_id=586137145 instance=ExtResource("5_6761a")]
-position = Vector2(395.00003, 551.99994)
+position = Vector2(6643.0005, 606)
 scale = Vector2(0.2, 0.2)
 
 [node name="mp4" parent="." unique_id=569190916 instance=ExtResource("5_6761a")]
-position = Vector2(75.000046, 547.99994)
+position = Vector2(693.00006, 140)
 scale = Vector2(0.2, 0.2)
 
 [node name="mp5" parent="." unique_id=771903748 groups=["machine parts"] instance=ExtResource("5_6761a")]
-position = Vector2(-3699.9998, 559.00006)
+position = Vector2(-5447, 559)
 scale = Vector2(0.2, 0.2)
 
 [node name="Platform" parent="." unique_id=1808641375 instance=ExtResource("1_6iamk")]
@@ -79,12 +79,25 @@ scale = Vector2(4, 3)
 position = Vector2(2240, 282.00006)
 scale = Vector2(4, 3)
 
+[node name="Platform6" parent="." unique_id=1884424559 instance=ExtResource("1_6iamk")]
+position = Vector2(3982, 282.00006)
+scale = Vector2(4, 3)
+
 [node name="Platform3" parent="." unique_id=806144662 instance=ExtResource("1_6iamk")]
-position = Vector2(-2950, 917.00006)
+position = Vector2(-3462, 917.00006)
+scale = Vector2(4, 3)
+
+[node name="Platform9" parent="." unique_id=94736819 instance=ExtResource("1_6iamk")]
+position = Vector2(-4854, 917.00006)
 scale = Vector2(4, 3)
 
 [node name="Platform4" parent="." unique_id=1328910452 instance=ExtResource("1_6iamk")]
-position = Vector2(-4072, 414)
+position = Vector2(-5915, 414)
+rotation = 1.5707964
+scale = Vector2(4, 3)
+
+[node name="Platform8" parent="." unique_id=1749380345 instance=ExtResource("1_6iamk")]
+position = Vector2(7081, 327)
 rotation = 1.5707964
 scale = Vector2(4, 3)
 
@@ -93,8 +106,16 @@ position = Vector2(318, 671.00006)
 rotation = -0.3996804
 scale = Vector2(4, 3)
 
+[node name="Platform7" parent="." unique_id=907224510 instance=ExtResource("1_6iamk")]
+position = Vector2(5899.9995, 670.00006)
+rotation = 0.3996804
+scale = Vector2(4, 3)
+
 [node name="Cat" parent="." unique_id=2060970103 instance=ExtResource("4_oc4kc")]
-position = Vector2(1907, 466)
+position = Vector2(3276, -191)
+
+[node name="Cat2" parent="." unique_id=1422098042 instance=ExtResource("4_oc4kc")]
+position = Vector2(-3895, 446)
 
 [node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
 position = Vector2(-2353.0002, 540)
@@ -108,6 +129,14 @@ scale = Vector2(9.999999, 9.999999)
 position = Vector2(-597, 588)
 scale = Vector2(1.5, 1.5)
 
+[node name="Leg2" parent="." unique_id=1402336115 instance=ExtResource("8_s8va5")]
+position = Vector2(5422, 118)
+scale = Vector2(1.5, 1.5)
+
+[node name="Leg3" parent="." unique_id=1302075308 instance=ExtResource("8_s8va5")]
+position = Vector2(6095, 400.00003)
+scale = Vector2(1.5, 1.5)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=362783446]
 stream = ExtResource("8_dga24")
 volume_db = -6.209
@@ -119,6 +148,15 @@ offset_top = 638.0
 offset_right = -903.0
 offset_bottom = 715.0
 text = "Collect pieces of your time machine by walking over them"
+label_settings = SubResource("LabelSettings_4m7pd")
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="." unique_id=2010291715]
+offset_left = 2321.0
+offset_top = -7.0
+offset_right = 3099.0
+offset_bottom = 70.0
+text = "Cats can hurt you! Hold the DOWN arrow to duck underneath its claws and attack its tail with the SPACE key"
 label_settings = SubResource("LabelSettings_4m7pd")
 autowrap_mode = 3
 

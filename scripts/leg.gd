@@ -10,6 +10,8 @@ var dangerHeight : float = 450.0
 var dropSpeed : float = 1200.0
 var raiseSpeed : float = 150.0
 
+var rng = RandomNumberGenerator.new()
+
 # states ... 
 # this is probably a horrible way of doing this but oh well
 var isWaitingtoStomp : bool = true
@@ -72,6 +74,7 @@ func raiseLeg(delta: float) -> void:
 		$danger.position.y = -dangerHeight
 		isRaising = false
 		isWaitingtoStomp = true
+		waitingTimePerStomp = rng.randf_range(5,10)
 
 # harm player 
 func _on_danger_body_entered(body: Node2D) -> void:

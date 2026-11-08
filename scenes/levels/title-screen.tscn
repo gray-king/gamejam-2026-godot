@@ -14,6 +14,10 @@ font_size = 67
 font_color = Color(0, 0, 0, 1)
 outline_size = 29
 
+[sub_resource type="LabelSettings" id="LabelSettings_78th7"]
+font = ExtResource("7_78th7")
+font_size = 28
+
 [node name="TitleScreen" type="Node2D" unique_id=711100602]
 script = ExtResource("1_ugbs4")
 
@@ -50,3 +54,11 @@ pivot_offset = Vector2(1492, 376)
 text = "Press SPACE to start"
 label_settings = SubResource("LabelSettings_4m7pd")
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=60220574]
+offset_left = -2514.0
+offset_top = 655.0
+offset_right = -2104.0
+offset_bottom = 684.0
+text = "Use the ARROW KEYS to move"
+label_settings = SubResource("LabelSettings_78th7")
