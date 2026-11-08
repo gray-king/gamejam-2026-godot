@@ -16,5 +16,5 @@ You must collect all the pieces in order to return back home!
 Use the arrows keys to move. When encountering cat enemies, press the DOWN arrow to avoid its claws and press SPACE to attack its tail (its weak point)
 
 ## TO PLAY
-
+Download and run RATBERT.exe from the repo :]
 
