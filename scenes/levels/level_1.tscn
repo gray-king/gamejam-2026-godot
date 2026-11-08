@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://lfrdpynsisj6" path="res://sprites/music/levelTheme.mp3" id="8_dga24"]
 [ext_resource type="PackedScene" uid="uid://bugyrq340purb" path="res://scenes/objects/leg.tscn" id="8_s8va5"]
 [ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="10_qxy0u"]
+[ext_resource type="AudioStream" uid="uid://bh2q7tanslxhx" path="res://sprites/sfx/stomp.mp3" id="13_dnkej"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oswj7"]
 font = ExtResource("10_qxy0u")
@@ -208,5 +209,8 @@ offset_top = -227.0
 offset_right = 1517.0
 offset_bottom = 740.0
 texture = ExtResource("2_excbq")
+
+[node name="stompSFX" type="AudioStreamPlayer" parent="." unique_id=1714079447]
+stream = ExtResource("13_dnkej")
 
 [connection signal="body_entered" from="timemachine" to="timemachine" method="_on_body_entered"]

@@ -12,6 +12,8 @@ var raiseSpeed : float = 150.0
 
 var rng = RandomNumberGenerator.new()
 
+@onready var gameController = self.get_parent()
+
 # states ... 
 # this is probably a horrible way of doing this but oh well
 var isWaitingtoStomp : bool = true
@@ -63,6 +65,8 @@ func stomp(delta: float) -> void:
 
 	if $danger.position.y >= 0.0:
 		$danger.position.y = 0.0
+		if $VisibleOnScreenNotifier2D.is_on_screen():
+			gameController.stompSFX.play()
 		isStomping = false
 		isWaitingToRise = true
 		stompTimer = 0.0

@@ -4,6 +4,7 @@ extends Node
 @onready var hPtext = $UI/machinePartCounter/hpCounter
 
 @onready var player = $Player
+@onready var stompSFX = $stompSFX
 
 var gameCompleted : bool = false
 
@@ -19,9 +20,9 @@ func _process(delta: float) -> void:
 	if player.hp == 0:
 		get_tree().change_scene_to_file("res://scenes/levels/game-over.tscn")
 
-
 func decreaseObjectCount():
 	objectsToFind -= 1
 	machineText.text = str(objectsToFind) + " left to find"
 	if objectsToFind == 0:
 		machineText.text = "Return to your time machine!"
+		
