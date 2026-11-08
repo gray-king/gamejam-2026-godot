@@ -4,7 +4,21 @@ var speed : float = 300
 var jump_speed : float = -400.0
 var hp : int = 20
 
+var direction
+
+@onready var animatedSprite = $Sprite2D
+
 func _process(delta: float) -> void:
+	
+	# animations
+	if velocity == Vector2.ZERO:
+		animatedSprite.play("idle")
+	else:
+		if direction < 0:
+			animatedSprite.play("walk-left")
+		elif direction > 0:
+			animatedSprite.play("walk-right")
+		
 	if hp <= 0:
 		# TODO kill player :( + game over screen
 		pass
@@ -22,7 +36,7 @@ func _physics_process(delta):
 		velocity.y = jump_speed
 
 	# Get the input direction.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * speed
 
 	move_and_slide()

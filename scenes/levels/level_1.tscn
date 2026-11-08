@@ -40,8 +40,8 @@ scale = Vector2(10, 1)
 position = Vector2(1907, 466)
 
 [node name="Player" parent="." unique_id=1219560730 instance=ExtResource("2_nsrm0")]
-position = Vector2(-206.99994, 562)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-204, 540)
+scale = Vector2(0.18, 0.18)
 script = ExtResource("3_nsrm0")
 
 [node name="Camera" parent="Player" unique_id=1943534982 instance=ExtResource("4_x42e6")]

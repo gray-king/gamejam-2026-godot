@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameJam 2026"
-run/main_scene="uid://gkf3fprse2f4"
+run/main_scene="uid://c2q02264vbk0d"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
