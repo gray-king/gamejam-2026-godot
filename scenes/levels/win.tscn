@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dewpjbad165uu"]
+
+[ext_resource type="Texture2D" uid="uid://bk6gv6ldup2ry" path="res://sprites/silly.jpg" id="1_dhd0j"]
+[ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="2_fpces"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4m7pd"]
+font = ExtResource("2_fpces")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oswj7"]
+font = ExtResource("2_fpces")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Win" type="Node2D" unique_id=1242918524]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=842490474]
+offset_left = -4276.0
+offset_top = -2364.0
+offset_right = 1564.0
+offset_bottom = 976.0
+texture = ExtResource("1_dhd0j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=640156989]
+offset_left = 46.0
+offset_top = 25.0
+offset_right = 646.0
+offset_bottom = 625.0
+texture = ExtResource("1_dhd0j")
+
+[node name="Label" type="Label" parent="." unique_id=619209488]
+offset_left = 758.0
+offset_top = 201.0
+offset_right = 1168.0
+offset_bottom = 271.0
+text = "YOU WIN!!!!!!!"
+label_settings = SubResource("LabelSettings_4m7pd")
+
+[node name="Label2" type="Label" parent="." unique_id=505917072]
+offset_left = 767.0
+offset_top = 320.0
+offset_right = 1151.0
+offset_bottom = 360.0
+text = "Thank you for playing!"
+label_settings = SubResource("LabelSettings_oswj7")

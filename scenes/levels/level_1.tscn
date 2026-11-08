@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bmocm373pwjq7" path="res://sprites/timemachine.png" id="2_dga24"]
 [ext_resource type="Texture2D" uid="uid://n3v1pp5m38s8" path="res://sprites/level BG.jpg" id="2_excbq"]
 [ext_resource type="PackedScene" uid="uid://pwec47c8kiv2" path="res://scenes/objects/player.tscn" id="2_nsrm0"]
+[ext_resource type="Script" uid="uid://cqrkkd6ch1656" path="res://scripts/timemachine.gd" id="3_iav0o"]
 [ext_resource type="PackedScene" uid="uid://68q3r6rskmwq" path="res://scenes/objects/cat.tscn" id="4_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bvlo67nljeewa" path="res://scenes/objects/camera.tscn" id="4_x42e6"]
 [ext_resource type="PackedScene" uid="uid://bfmxyne2o3nj6" path="res://scenes/objects/machinepart.tscn" id="5_6761a"]
@@ -17,6 +18,9 @@ font = ExtResource("10_qxy0u")
 font_size = 40
 shadow_size = 10
 shadow_color = Color(0, 0, 0, 0.85490197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m7pd"]
+size = Vector2(206.81934, 533.9271)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4m7pd"]
 font = ExtResource("10_qxy0u")
@@ -46,10 +50,17 @@ offset_transform_position = Vector2(20, 20)
 text = "HP: 20"
 label_settings = SubResource("LabelSettings_oswj7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=983533333]
+[node name="timemachine" type="Area2D" parent="." unique_id=988873050]
 position = Vector2(-2348, 397)
 scale = Vector2(0.36073723, 0.36073723)
+script = ExtResource("3_iav0o")
+
+[node name="Sprite2D" type="Sprite2D" parent="timemachine" unique_id=1413993828]
 texture = ExtResource("2_dga24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="timemachine" unique_id=924877174]
+position = Vector2(2.772255, 274.438)
+shape = SubResource("RectangleShape2D_4m7pd")
 
 [node name="mp1" parent="." unique_id=2145415990 instance=ExtResource("5_6761a")]
 position = Vector2(-1330.9999, 569.99994)
@@ -197,3 +208,5 @@ offset_top = -227.0
 offset_right = 1517.0
 offset_bottom = 740.0
 texture = ExtResource("2_excbq")
+
+[connection signal="body_entered" from="timemachine" to="timemachine" method="_on_body_entered"]

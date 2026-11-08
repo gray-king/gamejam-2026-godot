@@ -1,3 +1,49 @@
 [gd_scene format=3 uid="uid://wqohmprtf1dy"]
 
+[ext_resource type="Texture2D" uid="uid://do4mw4e7k5v5v" path="res://sprites/silly2.jpg" id="1_5wqu1"]
+[ext_resource type="Script" uid="uid://bjjigm3sw8ois" path="res://scripts/gameover.gd" id="1_uj2j1"]
+[ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="2_uj2j1"]
+
+[sub_resource type="Gradient" id="Gradient_3ltms"]
+offsets = PackedFloat32Array(0, 0.031862747)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fw668"]
+gradient = SubResource("Gradient_3ltms")
+
+[sub_resource type="LabelSettings" id="LabelSettings_4m7pd"]
+font = ExtResource("2_uj2j1")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
 [node name="GameOver" type="Node2D" unique_id=754112623]
+script = ExtResource("1_uj2j1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=689300888]
+offset_left = -61.0
+offset_top = -41.0
+offset_right = 1363.0
+offset_bottom = 761.0
+texture = SubResource("GradientTexture1D_fw668")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=76169128]
+offset_left = 6.0
+offset_top = 26.0
+offset_right = 1006.0
+offset_bottom = 733.0
+texture = ExtResource("1_5wqu1")
+
+[node name="Label" type="Label" parent="." unique_id=1163830948]
+offset_left = 692.0
+offset_top = 62.0
+offset_right = 1138.0
+offset_bottom = 132.0
+text = "Game Over..."
+label_settings = SubResource("LabelSettings_4m7pd")
+
+[node name="Label2" type="Label" parent="." unique_id=416589147]
+offset_left = 337.0
+offset_top = 170.0
+offset_right = 1185.0
+offset_bottom = 240.0
+text = "Press SPACE to play again"
+label_settings = SubResource("LabelSettings_4m7pd")

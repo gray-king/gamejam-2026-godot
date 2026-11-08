@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed : float = 300
 var jump_speed : float = -400.0
-var hp : int = 20
+var hp : int = 15
 
 var direction
 

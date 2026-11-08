@@ -5,10 +5,20 @@ extends Node
 
 @onready var player = $Player
 
+var gameCompleted : bool = false
+
 var objectsToFind = 5
+
+func _ready() -> void:
+	machineText.text = str(objectsToFind) + " left to find"
 
 func _process(delta: float) -> void:
 	hPtext.text = "HP: " + str(player.hp)
+	if gameCompleted:
+		get_tree().change_scene_to_file("res://scenes/levels/win.tscn")
+	if player.hp == 0:
+		get_tree().change_scene_to_file("res://scenes/levels/game-over.tscn")
+
 
 func decreaseObjectCount():
 	objectsToFind -= 1
