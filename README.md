@@ -18,3 +18,5 @@ Use the arrows keys to move. When encountering cat enemies, press the DOWN arrow
 ## TO PLAY
 Download and run RATBERT.exe from the repo :]
 
+## TECH STUFF
+Game Engine: Godot; Language: GDScript; Art software: ibisPaint for Windows
