@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bugyrq340purb" path="res://scenes/objects/leg.tscn" id="8_s8va5"]
 [ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="10_qxy0u"]
 [ext_resource type="AudioStream" uid="uid://bh2q7tanslxhx" path="res://sprites/sfx/stomp.mp3" id="13_dnkej"]
+[ext_resource type="AudioStream" uid="uid://ceamwimdjgm3j" path="res://sprites/sfx/squeak.mp3" id="14_mm8aj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oswj7"]
 font = ExtResource("10_qxy0u")
@@ -212,5 +213,8 @@ texture = ExtResource("2_excbq")
 
 [node name="stompSFX" type="AudioStreamPlayer" parent="." unique_id=1714079447]
 stream = ExtResource("13_dnkej")
+
+[node name="squeakSFX" type="AudioStreamPlayer" parent="." unique_id=1592316509]
+stream = ExtResource("14_mm8aj")
 
 [connection signal="body_entered" from="timemachine" to="timemachine" method="_on_body_entered"]

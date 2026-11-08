@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var player = get_tree().get_first_node_in_group("player")
+@onready var gameController = self.get_parent()
 
 var rng = RandomNumberGenerator.new()
 var moving : bool = false
@@ -51,6 +52,7 @@ func _process(delta: float) -> void:
 		dangerTimer += delta
 		if dangerTimer >= 0.5:
 			player.hp -= 1 # deal damage to player
+			gameController.squeakSFX.play()
 			dangerTimer -= 0.5 # reset timer
 			
 	# if player detected, chase after them

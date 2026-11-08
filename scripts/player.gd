@@ -19,9 +19,6 @@ func _process(delta: float) -> void:
 		elif direction > 0:
 			animatedSprite.play("walk-right")
 		
-	if hp <= 0:
-		# TODO kill player :( + game over screen
-		pass
 	
 func get_input():
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

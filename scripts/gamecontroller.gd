@@ -5,6 +5,7 @@ extends Node
 
 @onready var player = $Player
 @onready var stompSFX = $stompSFX
+@onready var squeakSFX = $squeakSFX
 
 var gameCompleted : bool = false
 
@@ -17,7 +18,7 @@ func _process(delta: float) -> void:
 	hPtext.text = "HP: " + str(player.hp)
 	if gameCompleted:
 		get_tree().change_scene_to_file("res://scenes/levels/win.tscn")
-	if player.hp == 0:
+	if player.hp <= 0:
 		get_tree().change_scene_to_file("res://scenes/levels/game-over.tscn")
 
 func decreaseObjectCount():
