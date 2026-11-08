@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://gkf3fprse2f4"]
+
+[ext_resource type="Texture2D" uid="uid://dr05pilcud0a2" path="res://sprites/logo.png" id="1_g4unx"]
+[ext_resource type="Texture2D" uid="uid://lw53i8lxbvpg" path="res://sprites/titlescreenBG.png" id="1_pi6am"]
+[ext_resource type="Script" uid="uid://cjpgsugwqbggx" path="res://scripts/titlescreen.gd" id="1_ugbs4"]
+[ext_resource type="Texture2D" uid="uid://deoi0ci65i3no" path="res://sprites/spiral.png" id="3_8uti0"]
+[ext_resource type="Texture2D" uid="uid://dvdn7siu4ieoo" path="res://sprites/ratbert.png" id="4_mohi6"]
+[ext_resource type="AudioStream" uid="uid://bjivai7l4qw56" path="res://sprites/music/titleScreen.mp3" id="6_mohi6"]
+[ext_resource type="FontFile" uid="uid://pktsv3wsx2p" path="res://sprites/friendlyscribbles.ttf" id="7_78th7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4m7pd"]
+font = ExtResource("7_78th7")
+font_size = 67
+font_color = Color(0, 0, 0, 1)
+outline_size = 29
+
+[node name="TitleScreen" type="Node2D" unique_id=711100602]
+script = ExtResource("1_ugbs4")
+
+[node name="background" type="TextureRect" parent="." unique_id=1551180195]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_pi6am")
+
+[node name="spiral" type="Sprite2D" parent="." unique_id=1924228933]
+position = Vector2(617, 259)
+texture = ExtResource("3_8uti0")
+
+[node name="ratbert" type="TextureRect" parent="." unique_id=1919621359]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_mohi6")
+
+[node name="logo" type="Sprite2D" parent="." unique_id=1032967001]
+position = Vector2(382.99997, 242)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_g4unx")
+offset = Vector2(244.44449, 111.111115)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=990605393]
+stream = ExtResource("6_mohi6")
+autoplay = true
+
+[node name="RichTextLabel" type="Label" parent="." unique_id=2120598497]
+offset_left = 290.0
+offset_top = 544.0
+offset_right = 944.0
+offset_bottom = 612.0
+pivot_offset = Vector2(1492, 376)
+text = "Press SPACE to start"
+label_settings = SubResource("LabelSettings_4m7pd")
+horizontal_alignment = 1
